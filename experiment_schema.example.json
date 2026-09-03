@@ -1,0 +1,49 @@
+{
+  "run_id": "retention_puf_room_temp_001",
+  "operator": "",
+  "institution": "",
+  "dimm_id": "DIMM_001",
+  "manufacturer": "unknown",
+  "part_number": "unknown",
+  "module_type": "unknown",
+  "rank_count": "unknown",
+  "device_width": "unknown",
+  "banks_per_group": 4,
+  "temperature_c": 22.0,
+  "voltage_vdd_v": 1.2,
+  "nominal_trcd_slots": 9,
+  "nominal_trp_slots": 9,
+  "retention": {
+    "include_zero_ms_control": true,
+    "sweep_type": "explicit",
+    "times_ms": [
+      64,
+      128,
+      256,
+      512,
+      1000
+    ],
+    "fabric_cycle_ns": 6.0
+  },
+  "repetitions": 10,
+  "cache_lines_per_row": 128,
+  "write_observations_csv": false,
+  "write_raw_records_csv": true,
+  "region_generation": {
+    "rows_per_region": 256,
+    "selections": [
+      {
+        "selection_id": "R0_BG0_B0",
+        "rank": 0,
+        "bank_group": 0,
+        "bank": 0,
+        "row_start": 0,
+        "row_end": 1023
+      }
+    ]
+  },
+  "storage": {
+    "assumed_flip_rate": 0.001,
+    "maximum_estimated_total_gib": 500
+  }
+}

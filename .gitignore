@@ -1,0 +1,13 @@
+retention_puf_collector
+*.o
+config.json
+experiment_schema.json
+dataset_estimate.json
+dram_retention_puf_data/
+*.bin
+*.log
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.DS_Store

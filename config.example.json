@@ -1,0 +1,69 @@
+{
+  "collector_binary": "./retention_puf_collector",
+  "output_root": "./dram_retention_puf_data",
+  "run": {
+    "run_id": "retention_puf_room_temp_001",
+    "operator": "",
+    "institution": ""
+  },
+  "board": {
+    "board_id": "ALVEO_U200_01",
+    "bitstream_file": "unknown",
+    "bitstream_sha256": "unknown"
+  },
+  "dimm": {
+    "dimm_id": "DIMM_001",
+    "manufacturer": "unknown",
+    "part_number": "unknown",
+    "serial_number": "unknown",
+    "module_type": "unknown",
+    "rank_count": "unknown",
+    "device_width": "unknown",
+    "banks_per_group": 4
+  },
+  "environment": {
+    "temperature_c": 22.0,
+    "temperature_source": "manual_room_temperature",
+    "voltage_vdd_v": 1.2,
+    "voltage_source": "manual"
+  },
+  "timing": {
+    "nominal_trcd_slots": 9,
+    "nominal_trp_slots": 9,
+    "slot_ns_metadata": 1.5,
+    "write_spacing_slots": 7,
+    "read_spacing_slots": 7,
+    "write_recovery_slots": 8,
+    "read_to_precharge_slots": 8,
+    "final_guard_slots": 16
+  },
+  "retention": {
+    "include_zero_ms_control": true,
+    "sweep_type": "explicit",
+    "times_ms": [64, 128, 256, 512, 1000],
+    "fabric_cycle_ns": 6.0
+  },
+  "geometry": {
+    "cache_lines_per_row": 128,
+    "cache_line_bytes": 64,
+    "column_stride": 8
+  },
+  "experiment": {
+    "patterns": ["00", "FF", "AA", "55"],
+    "repetitions": 10,
+    "write_observations_csv": false,
+    "write_raw_records_csv": true,
+    "timeout_seconds_per_retention_point": 86400,
+    "max_retries": 0
+  },
+  "regions": [
+    {
+      "region_id": "REGION_A",
+      "rank": 0,
+      "bank_group": 0,
+      "bank": 0,
+      "row_start": 0,
+      "row_end": 255
+    }
+  ]
+}
